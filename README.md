@@ -9,7 +9,7 @@ his are the best i've come across
 
 https://www.novaspirit.com/
 
-I will be modifying his version of the Conky config file 
+I have modified NovaSpirits .conkyrc file 
 as i am running the offical raspberry pi 7" touch display
 
 I DID NOT WRITE THESE PROGRAMS . . . 
@@ -19,8 +19,11 @@ So Far this Script does the following -
 Update
 Upgrade 
 Install Conky + add all Conky config files
+
 Install wbar + config
 
-To come ZRAM
+To come 
+ZRAM
+GitHub
 
 I will update it with more as I find them
