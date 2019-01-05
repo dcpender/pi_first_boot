@@ -2,6 +2,8 @@ This is just a script i have put together with programs I have found and like.
 I didn't write any of these programs I simply got sick of installing them 
 evertime I started my Pi from scratch again.
 
+If you wish to use it you need to run it as root
+
 Everything so far come from NovaSpirit as after trying out lots of others 
 his are the best i've come across
 
