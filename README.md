@@ -21,9 +21,9 @@ Upgrade
 Install Conky + add all Conky config files
 
 Install wbar + config
-
-To come 
 ZRAM
-GitHub
+
+
+GitHub to come
 
 I will update it with more as I find them
