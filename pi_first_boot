@@ -4,32 +4,37 @@
 
 #Update as Root
 sudo apt-get update
-echo Update Done
 
 #Upgrade as Root
 sudo apt-get upgrade -y
-echo Upgrade Done
 
 #Install Conky
 sudo apt-get install conky -y
-echo Conky Installed
 
 #Conky Settings File
-wget -O /home/pi/.conkyrc https://raw.githubusercontent.com/novaspirit/rpi_conky/master/rpi3_conkyrc
-echo Downloaded Conky Settings
+wget -O /home/pi/.conkyrc https://github.com/dcpender/pi_first_boot/blob/master/.conkyrc
 
 #Create Conky Shell Script
 sudo printf '#!/bin/sh\n(sleep 4s && conky) &\nexit 0' > /usr/bin/conky.sh
 
 #Create the conky.desktop file for the autostart process
 printf '[Desktop Entry]\nName=conky\nType=Application\nExec=sh /usr/bin/conky.sh\nTerminal=false\nComment=system monitoring tool.\nCategories=Utility;' > /etc/xdg/autostart/conky.desktop
-echo Conky is Installed
 
 #Install WBar
 sudo apt-get install wbar wbar-config -y
-echo WBAR is Installed, Time to Reboot
+
+#Enable ZRAM
+sudo wget -O /usr/bin/zram.sh https://raw.githubusercontent.com/novaspirit/rpi_zram/master/zram.sh
+
+#Make ZRAM Executable
+sudo chmod +x /usr/bin/zram.sh
+
+#edit /etc/rc.local file to run script on boot
+sed -i '/exit 0/c\/usr/bin/zram.sh &\nexit 0' /etc/rc.local
+
+
+
 
 
 
 #Reboot
-
